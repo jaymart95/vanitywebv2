@@ -9,4 +9,4 @@ RUN pip install -r requirements.txt
 
 COPY src/ .
 EXPOSE 4545
-CMD [ "python", "app.py" ]
+CMD [ "python", "main.py" ]
