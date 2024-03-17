@@ -1,309 +1,274 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vanity Roles - a Discord Bot</title>
-    <link rel="stylesheet" href="/css/bulma.min.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/tippy.js@6/animations/scale.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    
-    <script defer data-domain="vanityroles.com" src="https://plausible.io/js/script.js"></script>
-    <script src="/js/jquery-3.6.0.js"></script>
-    
-  </head>
-  <body>
-    <!-- Back To Top Start -->
-    <a id="backtotop" data-tippy-content="Back To Top.">
-      <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
-    </a>
-    <!-- Back To Top End -->
 
-    <!-- Navbar Start -->
-    <nav
-      class="navbar is-fixed-top"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand mt-2 mb-2">
-        <a class="navbar-item" href="#">
-          <strong>Vanity Roles</strong>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanity Roles - a Discord Bot</title>
+  <link rel="stylesheet" href="/css/bulma.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-          <!-- or if you want to use image -->
-          <!-- <img
+  <script defer data-domain="vanityroles.com" src="https://plausible.io/js/script.js"></script>
+  <script src="/js/jquery-3.6.0.js"></script>
+
+</head>
+
+<body>
+  <!-- Back To Top Start -->
+  <a id="backtotop" data-tippy-content="Back To Top.">
+    <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
+  </a>
+  <!-- Back To Top End -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand mt-2 mb-2">
+      <a class="navbar-item" href="#">
+        <strong>Vanity Roles</strong>
+
+        <!-- or if you want to use image -->
+        <!-- <img
             src="image link or path"
             width="112"
             height="28"
           /> -->
+      </a>
+
+      <a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu"
+        aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="#" class="navbar-item is-tab">
+          Home
         </a>
 
-        <a
-          role="button"
-          class="navbar-burger has-text-white"
-          data-target="navMenu"
-          aria-label="menu"
-          aria-expanded="false"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+        <a href="#features" class="navbar-item is-tab">
+          Features
+        </a>
+
+        <a href="https://docs.vanityroles.com" class="navbar-item is-tab">
+          Docs
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a href="#" class="navbar-item is-tab">
-            Home
-          </a>
+      <div class="navbar-end">
+        <a href="#" class="navbar-item is-tab" target="_blank">
+          <i class="fa-brands fa-discord"></i>
+        </a>
 
-          <a href="#features" class="navbar-item is-tab">
-            Features
-          </a>
+        <a href="http://github.com/jaymart95" class="navbar-item is-tab" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
 
-          <a href="https://status.vanityroles.com" class="navbar-item is-tab">
-            Status
-          </a>
-
-          <a href="https://docs.vanityroles.com" class="navbar-item is-tab">
-            Docs
-          </a>
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="https://dashboard.vanityroles.com" class="button is-blurple">
+              <strong><i class="fa-solid fa-right-to-bracket mr-2"></i>
+                Dashboard</strong>
+            </a>
+          </div>
         </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
 
-        <div class="navbar-end">
-          <a href="#" class="navbar-item is-tab" target="_blank">
-            <i class="fa-brands fa-discord"></i>
-          </a>
-
-          <a href="http://github.com/jaymart95" class="navbar-item is-tab" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
-
-          <div class="navbar-item">
+  <!-- Hero Section Start -->
+  <section class="hero bg-base is-fullheight">
+    <div class="hero-body">
+      <div class="">
+        <div class="columns">
+          <div class="column mr-6 mt-12" data-aos="fade-up">
+            <p class="title has-text-white has-text-weight-bold">
+              Time to add Vanity Roles to your server.
+            </p>
+            <p class="subtitle has-text-grey-light is-size-6 mt-3">
+              Vanity Roles allows you to reward your members with access to channels or give them a role by repping your
+              server.
+            </p>
             <div class="buttons">
-              <a href="https://dashboard.vanityroles.com" class="button is-blurple">
-                <strong
-                  ><i class="fa-solid fa-right-to-bracket mr-2"></i>
-                  Dashboard</strong
-                >
+              <a href="https://discord.com/api/oauth2/authorize?client_id=1057043734526701589&permissions=139855154256&scope=bot%20applications.commands"
+                class="button is-info">
+                <strong>Add To Discord</strong>
+              </a>
+
+              <a href="premium.html" class="button is-outlined">
+                <strong><i class="fa-solid fa-crown"></i> Premium</strong>
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Hero Section Start -->
-    <section class="hero bg-base is-fullheight">
-      <div class="hero-body">
-        <div class="">
-          <div class="columns">
-            <div class="column mr-6 mt-12" data-aos="fade-up">
-              <p class="title has-text-white has-text-weight-bold">
-                Time to add Vanity Roles to your server.
-              </p>
-              <p class="subtitle has-text-grey-light is-size-6 mt-3">
-                Vanity Roles allows you to reward your members with access to channels or give them a role by repping your server.
-              </p>
-              <div class="buttons">
-                <a href="https://discord.com/api/oauth2/authorize?client_id=1057043734526701589&permissions=139855154256&scope=bot%20applications.commands" class="button is-info">
-                  <strong>Add To Discord</strong>
-                </a>
-
-                <a href="premium.html" class="button is-outlined">
-                  <strong><i class="fa-solid fa-crown"></i> Premium</strong>
-                </a>
-              </div>
-            </div>
-            <div class="column mt-6" data-aos="fade-left">
-              <img
-                class="image has-image-centered vert-move mt-4"
-                src="/img/logo-red-1-modified.png"
-                alt="hero image"
-                style="width: 20rem;"
-              />
-            </div>
+          <div class="column mt-6" data-aos="fade-left">
+            <img class="image has-image-centered vert-move mt-4" src="/img/logo-red-1-modified.png" alt="hero image"
+              style="width: 20rem;" />
           </div>
         </div>
       </div>
-      <div class="has-text-centered" data-tippy-content="Scroll Down">
-        <a href="#features"
-          ><i
-            class="fa-solid fa-circle-chevron-down fa-lg vert-move2 has-text-white"
-          ></i
-        ></a>
-      </div>
-    </section>
-    <!-- Hero Section End -->
+    </div>
+    <div class="has-text-centered" data-tippy-content="Scroll Down">
+      <a href="#features"><i class="fa-solid fa-circle-chevron-down fa-lg vert-move2 has-text-white"></i></a>
+    </div>
+  </section>
+  <!-- Hero Section End -->
 
-    <!-- Hero Waves Start -->
-    <!-- Hero Waves End -->
+  <!-- Hero Waves Start -->
+  <!-- Hero Waves End -->
 
-    <!-- Features Section Start -->
-    <section id="features" class="section mt-6">
-      <div class="has-text-centered">
-        <h1 class="title lined">Features</h1>
-        <div class="line line-center blurple"></div>
-      </div>
+  <!-- Features Section Start -->
+  <section id="features" class="section mt-6">
+    <div class="has-text-centered">
+      <h1 class="title lined">Features</h1>
+      <div class="line line-center blurple"></div>
+    </div>
 
-      <!-- single feature start (Left) -->
+    <!-- single feature start (Left) -->
 
-        <div class="columns mt-6">
-          <div class="column mr-6">
-            <h4 class="title">Embed Customization <span class="blurple"></span></h4>
-            <p class="subtitle mt-3">
-              A fully customizable embed that is sent everytime a user adds your vanity to their custom status. You have the ability to customize every aspect of the embed to your own liking.
-            </p>
-          </div>
-          <div class="column" data-aos="fade-left"> 
-            <img
-              class="image has-image-centered"
-              src="https://616795721-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FS4UWSfWVLAKJ71idZlyo%2Fuploads%2FRbhHibw7MV0Slw8xNbLs%2FUntitled.png?alt=media&token=2f655a46-20ef-4d9a-8bc3-4cbc6d360289"
-              alt="feature1 img"
-              style="width: 50rem;"
-            />
-          </div>
-        </div>
-      </div>
-      <!-- single feature end (Left) -->
-
-      <!-- single feature start (Right) -->
-
-        <div class="columns mt-6">
-          <div class="column" data-aos="fade-right">
-            <img
-              class="image has-image-centered"
-              src="/img/blacklist.png"
-              alt="feature1 img"
-              style="width: 50rem;"
-            />
-          </div>
-          <div class="column">
-            <h4 class="title">
-              Vanity Blacklist <span class="has-text-primary"></span>
-            </h4>
-            <p class="subtitle mt-3">
-              Vanity Blacklist allows you to blacklist certain words from being used in custom statuses. This is useful if you want to prevent users from using inappropriate words in their custom status. It also allows you to blacklist vanitys of servers you don't like or want to support.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- single feature end (Right) -->
-
-      <!-- single feature start (Left) -->
-
-        <div class="columns mt-6">
-          <div class="column mr-6">
-            <h4 class="title">
-              Dashboard <span class="has-text-warning"></span>
-            </h4>
-            <p class="subtitle mt-3">
-              Tired of using commands to configure your server? Vanity Roles has a dashboard that allows you to configure your server with ease. You can also view your server's stats and more!
-            </p>
-          </div>
-          <div class="column" data-aos="fade-left">
-            <img
-              class="image has-image-centered"
-              src="/img/dashboard.png"
-              alt="feature1 img"
-              style="width: 120rem;"
-            />
-          </div>
-        </div>
-      </div>
-      <!-- single feature end (Left) -->
-
-      <!-- single feature start (Right) -->
-      </div>
-      <!-- single feature end (Right) -->
-    </section>
-    <!-- Features Section End -->
-
-    <!-- Stats Section Start -->
-    <section id="stats" class="section mt-6">
-      <div class="has-text-centered">
-        <h1 class="title lined">Stats</h1>
-        <div class="line line-center blurple"></div>
-      </div>
-
-      <div class="columns mt-6">
-        <div class="column has-text-centered">
-          <p class="title has-text-weight-bold lined">10000+</p>
-          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-server"></i> Servers</span>
-        </div>
-
-        <div class="column has-text-centered">
-          <p class="title has-text-weight-bold lined">86+</p>
-          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Commands</span>
-        </div>
-
-        <div class="column has-text-centered">
-          <p class="title has-text-weight-bold lined">8,000,000+</p>
-          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-users"></i> Users</span>
-        </div>
-      </div>
-    </section>
-    <!-- Stats Section End -->
-
-    <!-- Invite Section Start -->
-    <section class="section mt-6">
-      <div class="columns">
-        <div class="column has-text-left">
-          <p class="title has-text-weight-bold">
-            Ready to try <span class="blurple">Vanity Roles</span>?
-          </p>
-          <p class="subtitle mt-3 has-text-gray">
-            Stop wasting time and add Vanity Roles to your server today!
-          </p>
-          <a href="https://docs.vanityroles.com" class="button is-blurple is-medium"
-            ><strong><i class="fa-solid fa-book"></i> Get Started</strong></a
-          >
-        </div>
-
-        <div class="column"></div>
-      </div>
-    </section>
-    <!-- Invite Section End -->
-
-    <!-- Footer Section Start -->
-    <footer class="footer bg-base">
-      <div class="content has-text-centered has-text-white">
-        <div class="mb-2">
-          <a href="https://discord.gg/rJxyySuTJ6" class="has-text-white" target="_blank">
-            <i class="fa-brands fa-discord"></i>
-          </a>
-          &nbsp; &nbsp;
-          <a href="https://github.com/jaymart95" class="has-text-white" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-
-        <p>
-          <span class="has-text-weight-bold">Vanity Roles</span>
-          <br />
-          &copy; <span id="cp-year"></span> Copyright Jay Development. All Rights
-          Reserved.
+    <div class="columns mt-6">
+      <div class="column mr-6">
+        <h4 class="title">Embed Customization <span class="blurple"></span></h4>
+        <p class="subtitle mt-3">
+          A fully customizable embed that is sent everytime a user adds your vanity to their custom status. You have the
+          ability to customize every aspect of the embed to your own liking.
         </p>
-
       </div>
-    </footer>
-    <!-- Footer Section End -->
+      <div class="column" data-aos="fade-left">
+        <img class="image has-image-centered"
+          src="https://616795721-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FS4UWSfWVLAKJ71idZlyo%2Fuploads%2FRbhHibw7MV0Slw8xNbLs%2FUntitled.png?alt=media&token=2f655a46-20ef-4d9a-8bc3-4cbc6d360289"
+          alt="feature1 img" style="width: 50rem;" />
+      </div>
+    </div>
+    </div>
+    <!-- single feature end (Left) -->
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
-    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-    <script src="/js/script.js"></script>
-  </body>
+    <!-- single feature start (Right) -->
+
+    <div class="columns mt-6">
+      <div class="column" data-aos="fade-right">
+        <img class="image has-image-centered" src="/img/blacklist.png" alt="feature1 img" style="width: 50rem;" />
+      </div>
+      <div class="column">
+        <h4 class="title">
+          Vanity Blacklist <span class="has-text-primary"></span>
+        </h4>
+        <p class="subtitle mt-3">
+          Vanity Blacklist allows you to blacklist certain words from being used in custom statuses. This is useful if
+          you want to prevent users from using inappropriate words in their custom status. It also allows you to
+          blacklist vanitys of servers you don't like or want to support.
+        </p>
+      </div>
+    </div>
+    </div>
+    <!-- single feature end (Right) -->
+
+    <!-- single feature start (Left) -->
+
+    <div class="columns mt-6">
+      <div class="column mr-6">
+        <h4 class="title">
+          Dashboard <span class="has-text-warning"></span>
+        </h4>
+        <p class="subtitle mt-3">
+          Tired of using commands to configure your server? Vanity Roles has a dashboard that allows you to configure
+          your server with ease. You can also view your server's stats and more!
+        </p>
+      </div>
+      <div class="column" data-aos="fade-left">
+        <img class="image has-image-centered" src="/img/dashboard.png" alt="feature1 img" style="width: 120rem;" />
+      </div>
+    </div>
+    </div>
+    <!-- single feature end (Left) -->
+
+    <!-- single feature start (Right) -->
+    </div>
+    <!-- single feature end (Right) -->
+  </section>
+  <!-- Features Section End -->
+
+  <!-- Stats Section Start -->
+  <section id="stats" class="section mt-6">
+    <div class="has-text-centered">
+      <h1 class="title lined">Stats</h1>
+      <div class="line line-center blurple"></div>
+    </div>
+
+    <div class="columns mt-6">
+      <div class="column has-text-centered">
+        <p class="title has-text-weight-bold lined">18000+</p>
+        <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-server"></i> Servers</span>
+      </div>
+
+      <div class="column has-text-centered">
+        <p class="title has-text-weight-bold lined">86+</p>
+        <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Commands</span>
+      </div>
+
+      <div class="column has-text-centered">
+        <p class="title has-text-weight-bold lined">11,000,000+</p>
+        <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-users"></i> Users</span>
+      </div>
+    </div>
+  </section>
+  <!-- Stats Section End -->
+
+  <!-- Invite Section Start -->
+  <section class="section mt-6">
+    <div class="columns">
+      <div class="column has-text-left">
+        <p class="title has-text-weight-bold">
+          Ready to try <span class="blurple">Vanity Roles</span>?
+        </p>
+        <p class="subtitle mt-3 has-text-gray">
+          Stop wasting time and add Vanity Roles to your server today!
+        </p>
+        <a href="https://docs.vanityroles.com" class="button is-blurple is-medium"><strong><i
+              class="fa-solid fa-book"></i> Get Started</strong></a>
+      </div>
+
+      <div class="column"></div>
+    </div>
+  </section>
+  <!-- Invite Section End -->
+
+  <!-- Footer Section Start -->
+  <footer class="footer bg-base">
+    <div class="content has-text-centered has-text-white">
+      <div class="mb-2">
+        <a href="https://discord.gg/rJxyySuTJ6" class="has-text-white" target="_blank">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+        &nbsp; &nbsp;
+        <a href="https://github.com/jaymart95" class="has-text-white" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+
+      <p>
+        <span class="has-text-weight-bold">Vanity Roles</span>
+        <br />
+        &copy; <span id="cp-year"></span> Copyright Jay Development. All Rights
+        Reserved.
+      </p>
+
+    </div>
+  </footer>
+  <!-- Footer Section End -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+
 </html>
