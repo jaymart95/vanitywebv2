@@ -1,1 +1,1 @@
-web: nginx -g "daemon off;"
+# No need to start Nginx explicitly
