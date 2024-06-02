@@ -1,7 +1,7 @@
 FROM python:3.10.8
 
 RUN apt-get update
-WORKDIR /usr/app
+WORKDIR /app
 
 COPY  requirements.txt .
 
