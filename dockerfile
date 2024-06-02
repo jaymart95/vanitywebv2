@@ -7,6 +7,6 @@ COPY  requirements.txt .
 
 RUN pip install -r requirements.txt
 
-COPY src/ .
+COPY app/ .
 EXPOSE 4545
 CMD [ "python", "main.py" ]
