@@ -1,12 +1,8 @@
-FROM python:3.10.8
+# Use an official Nginx image as the base image
+FROM nginx:latest
 
-RUN apt-get update
-WORKDIR /app
+# Copy the contents of your website to the nginx/html directory
+COPY . /usr/share/nginx/html
 
-COPY  requirements.txt .
-
-RUN pip install -r requirements.txt
-
-COPY src/ .
-EXPOSE 4545
-CMD [ "python", "main.py" ]
+# Expose port 80
+EXPOSE 80
