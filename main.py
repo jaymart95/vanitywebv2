@@ -6,7 +6,7 @@ from pathlib import Path
 import uvicorn
 
 app = FastAPI()
-app.mount("/", StaticFiles(directory="static",html = True), name="static")
+app.mount("/", StaticFiles(directory="app/static",html = True), name="static")
 
 
 @app.get("/")
