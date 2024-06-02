@@ -3,7 +3,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 import uvicorn
 
-app = FastAPI()
+app = FastAPI(debug=True)
 
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
