@@ -8,8 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
-.blurple {
-  color: #D80D0D;
+.goldenrod {
+  color: goldenrod !important;
+}
+
+.subtitle.is-6 .price {
+  color: goldenrod !important;
 }
 
 .bg-base {
@@ -18,7 +22,7 @@ html {
 
 #backtotop {
   display: inline-block;
-  background-color: #D80D0D;
+  background-color: goldenrod;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -53,6 +57,7 @@ html {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+
 
 .navbar-item:hover {
   background-color: transparent !important;
@@ -164,10 +169,6 @@ nav.nav-w {
   margin: 0 auto;
 }
 
-.line.blurple {
-  background: #D80D0D;
-}
-
 .title.lined {
   margin-bottom: 0px;
 }
@@ -189,12 +190,6 @@ nav.nav-w {
   100% {
     transform: translateY(-10px);
   }
-}
-
-.button.is-blurple {
-  background-color: #D80D0D;
-  border-color: transparent;
-  color: #fff;
 }
 
 .single-feature {
@@ -241,4 +236,70 @@ nav.nav-w {
   .shape-left {
     display: none;
   }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin: 20px 0;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.product-item img {
+  max-width: 100%;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

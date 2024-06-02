@@ -4,108 +4,250 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vanity Roles - a Discord Bot</title>
-  <link rel="stylesheet" href="static/css/bulma.min.css" />
-  <link rel="stylesheet" href="static/css/style.css" />
+  <title>Vanity Roles Store</title>
+  <link rel="stylesheet" href="/static/css/bulma.min.css" />
+  <link rel="stylesheet" href="/static/css/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <script src="static/js/jquery-3.6.0.js"></script>
+  <script defer data-domain="vanityroles.com" src="https://plausible.io/js/script.js"></script>
+  <script src="/static/js/jquery-3.6.0.js"></script>
+
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-wrapper {
+      flex: 1;
+    }
+
+    .section {
+      padding-top: 15rem;
+    }
+
+    .memberships {
+      margin-bottom: -2rem;
+      /* Adjust this value as needed */
+    }
+
+    .title.centered {
+      text-align: center;
+    }
+
+    .card {
+      background-color: #211F1F;
+    }
+
+    .card-content {
+      color: white;
+    }
+
+    .button.is-primary {
+      background-color: goldenrod;
+      border-color: goldenrod;
+      color: white;
+    }
+
+    .button.is-primary:hover {
+      background-color: goldenrod;
+      border-color: goldenrod;
+    }
+
+    .button.is-info.is-outlined {
+      border-color: goldenrod;
+      color: goldenrod;
+    }
+
+    .button.is-info.is-outlined:hover {
+      background-color: goldenrod;
+      border-color: goldenrod;
+      color: white;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 2rem 1.5rem;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Back To Top Start -->
-  <a id="backtotop" data-tippy-content="Back To Top.">
-    <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
-  </a>
-  <!-- Back To Top End -->
+  <div class="content-wrapper">
+    <!-- Back To Top Start -->
+    <a id="backtotop" data-tippy-content="Back To Top.">
+      <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
+    </a>
+    <!-- Back To Top End -->
 
-  <!-- Navbar Start -->
-  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand mt-2 mb-2">
-      <a class="navbar-item" href="https://vanityroles.com">
-        <strong>Vanity Roles</strong>
-
-        <!-- or if you want to use image -->
-        <!-- <img
-            src="image link or path"
-            width="112"
-            height="28"
-          /> -->
-      </a>
-
-      <a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu"
-        aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a href="https://vanityroles.com" class="navbar-item is-tab">
-          Home
+    <!-- Navbar Start -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand mt-2 mb-2">
+        <a class="navbar-item" href="#">
+          <strong>Vanity Roles</strong>
         </a>
 
-        <a href="https://vanityroles.com/#features" class="navbar-item is-tab">
-          Features
-        </a>
-
-        <a href="https://status.vanityroles.com" class="navbar-item is-tab">
-          Status
-        </a>
-
-        <a href="https://docs.vanityroles.com" class="navbar-item is-tab">
-          Docs
+        <a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu"
+          aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div class="navbar-end">
-        <a href="#" class="navbar-item is-tab" target="_blank">
-          <i class="fa-brands fa-discord"></i>
-        </a>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="#" class="navbar-item is-tab">
+            Home
+          </a>
 
-        <a href="http://github.com/jaymart95" class="navbar-item is-tab" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
+          <a href="#features" class="navbar-item is-tab">
+            Features
+          </a>
 
-        <div class="navbar-item">
-          <div class="buttons">
-            <a href="https://dashboard.vanityroles.com" class="button is-blurple">
-              <strong><i class="fa-solid fa-right-to-bracket mr-2"></i>
-                Dashboard</strong>
-            </a>
+          <a href="https://docs.vanityroles.com" class="navbar-item is-tab">
+            Docs
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="https://discord.com/invite/rJxyySuTJ6" class="navbar-item is-tab" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+
+          <a href="http://github.com/jaymart95" class="navbar-item is-tab" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="https://dashboard.vanityroles.com" class="button is-blurple">
+                <strong><i class="fa-solid fa-right-to-bracket mr-2"></i>
+                  Dashboard</strong>
+              </a>
+            </div>
           </div>
         </div>
       </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Memberships Section Start -->
+    <section id="memberships" class="section is-fullheight" style="background-color: #141313;">
+      <div class="container">
+        <h1 class="title centered">Memberships</h1>
+        <div class="columns is-multiline">
+          <!-- Membership Card -->
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="/static/img/V-Transparent-Red.png" alt="Basic">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4" style="color: #cc0a0a;">Basic</p>
+                    <p class="subtitle is-6" style="color: #fff;"> <span style="color: #cc0a0a;">$2.99</span> USD per
+                      month</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <button class="button is-info is-outlined"> <i class="fa-solid fa-info-circle mr-1"></i>Perks</button>
+                  <button class="button is-primary">Subscribe Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="/static/img/V-Transparent-Red.png" alt="Standard">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4" style="color: #cc0a0a;">Standard</p>
+                    <p class="subtitle is-6" style="color: #fff;"> <span style="color: #cc0a0a;">$4.99</span> USD per
+                      month</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <button class="button is-info is-outlined"><i class="fa-solid fa-info-circle mr-1"></i>Perks</button>
+                  <button class="button is-primary">Subscribe Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="/static/img/V-Transparent-Red.png" alt="Standard">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4" style="color: #cc0a0a;">Premium</p>
+                    <p class="subtitle is-6" style="color: #fff;"> <span style="color: #cc0a0a;">$7.99</span> USD per
+                      month</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <button class="button is-info is-outlined"><i class="fa-solid fa-info-circle mr-1"></i>Perks</button>
+                  <button class="button is-primary">Subscribe Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Memberships Section End -->
+  </div>
+
+  <!-- Footer Section Start -->
+  <footer class="footer bg-base">
+    <div class="content has-text-centered has-text-white">
+      <div class="mb-2">
+        <a href="https://discord.gg/rJxyySuTJ6" class="has-text-white" target="_blank">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+        &nbsp; &nbsp;
+        <a href="https://github.com/jaymart95" class="has-text-white" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <p>
+        <span class="has-text-weight-bold">Vanity Roles</span>
+        <br />
+        &copy; <span id="cp-year"></span> Copyright Jay Development. All Rights
+        Reserved.
+      </p>
     </div>
-  </nav>
-  <!-- Navbar End -->
+  </footer>
+  <!-- Footer Section End -->
 
-  <!-- Hero Section Start -->
-  <!-- Hero Section End -->
-
-  <!-- Hero Waves Start -->
-  <!-- Hero Waves End -->
-
-  <!-- Features Section Start -->
-  <section id="features" class="section mt-6">
-    <stripe-pricing-table pricing-table-id="prctbl_1NbTNyLDPk3i0bRS0me9W37m"
-      publishable-key="pk_live_GVWvR7vQo7FxweI8nE7ba4qX">
-    </stripe-pricing-table>
-
-    <!-- Invite Section Start -->
-    <!-- Invite Section End -->
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
-    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-    <script src="static/js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+  <script src="/static/js/script.js"></script>
 </body>
 
 </html>
