@@ -1,3 +1,0 @@
-[build]
-dockerfilePath = "app/DOCKERFILE"
-builder = "DOCKERFILE"
