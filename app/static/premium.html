@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vanity Roles Store</title>
+  <title>Vanity Roles - a Discord Bot</title>
   <link rel="stylesheet" href="/static/css/bulma.min.css" />
   <link rel="stylesheet" href="/static/css/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -12,75 +12,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <script defer data-domain="vanityroles.com" src="https://plausible.io/js/script.js"></script>
   <script src="/static/js/jquery-3.6.0.js"></script>
-
-  <style>
-    html,
-    body {
-      height: 100%;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .content-wrapper {
-      flex: 1;
-    }
-
-    .section {
-      padding-top: 15rem;
-    }
-
-    .memberships {
-      margin-bottom: -2rem;
-      /* Adjust this value as needed */
-    }
-
-    .title.centered {
-      text-align: center;
-    }
-
-    .card {
-      background-color: #211F1F;
-    }
-
-    .card-content {
-      color: white;
-    }
-
-    .button.is-primary {
-      background-color: goldenrod;
-      border-color: goldenrod;
-      color: white;
-    }
-
-    .button.is-primary:hover {
-      background-color: goldenrod;
-      border-color: goldenrod;
-    }
-
-    .button.is-info.is-outlined {
-      border-color: goldenrod;
-      color: goldenrod;
-    }
-
-    .button.is-info.is-outlined:hover {
-      background-color: goldenrod;
-      border-color: goldenrod;
-      color: white;
-    }
-
-    .footer {
-      background-color: #333;
-      color: #fff;
-      padding: 2rem 1.5rem;
-      width: 100%;
-    }
-  </style>
 </head>
 
 <body>
@@ -97,7 +30,6 @@
         <a class="navbar-item" href="#">
           <strong>Vanity Roles</strong>
         </a>
-
         <a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu"
           aria-expanded="false">
           <span aria-hidden="true"></span>
@@ -105,36 +37,23 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
-
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a href="/home" class="navbar-item is-tab">
-            Home
-          </a>
-
-          <a href="vanityroles.com/#features" class="navbar-item is-tab">
-            Features
-          </a>
-
-          <a href="https://docs.vanityroles.com" class="navbar-item is-tab">
-            Docs
-          </a>
+          <a href="#" class="navbar-item is-tab">Home</a>
+          <a href="#features" class="navbar-item is-tab">Features</a>
+          <a href="https://docs.vanityroles.com" class="navbar-item is-tab">Docs</a>
         </div>
-
         <div class="navbar-end">
           <a href="https://discord.com/invite/rJxyySuTJ6" class="navbar-item is-tab" target="_blank">
             <i class="fa-brands fa-discord"></i>
           </a>
-
           <a href="http://github.com/jaymart95" class="navbar-item is-tab" target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
-
           <div class="navbar-item">
             <div class="buttons">
               <a href="https://dashboard.vanityroles.com" class="button is-blurple">
-                <strong><i class="fa-solid fa-right-to-bracket mr-2"></i>
-                  Dashboard</strong>
+                <strong><i class="fa-solid fa-right-to-bracket mr-2"></i> Dashboard</strong>
               </a>
             </div>
           </div>
@@ -143,112 +62,189 @@
     </nav>
     <!-- Navbar End -->
 
-    <!-- Memberships Section Start -->
-    <section id="subscriptions" class="section is-fullheight" style="background-color: #141313;">
+    <!-- Premium Section Start -->
+    <section class="hero-section">
       <div class="container">
-        <h1 class="title centered">Subscriptions</h1>
-        <div class="columns is-multiline">
-          <!-- Membership Card -->
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-64x64">
-                      <img src="/static/img/V-Transparent-Red.png" alt="Basic">
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-4" style="color: #cc0a0a;">Basic</p>
-                    <p class="subtitle is-6" style="color: #fff;"> <span style="color: #cc0a0a;">$2.99</span> USD per
-                      month</p>
-                  </div>
-                </div>
-                <div class="content">
-                  <button class="button is-info is-outlined"> <i class="fa-solid fa-info-circle mr-1"></i>Perks</button>
-                  <a href="https://store.vanityroles.com/buy/143096da-bbf3-44b5-81a2-03b342dc01f5"
-                    class="button is-primary">Subscribe Now</a>
-                </div>
-              </div>
+        <h1 class="title is-1 has-text-white">Premium</h1>
+        <p>Power up your server with these new and exclusive features</p>
+      </div>
+    </section>
+
+    <section id="subscriptions" class="container my-5">
+      <div class="text-center mb-5">
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-one-third">
+          <div class="card position-relative">
+            <span class="most-popular">Most popular</span>
+            <div class="card-content">
+              <h5 class="title is-4" style="color: #cc0a0a;">Lifetime</h5>
+              <p class="subtitle is-6">$65.99 USD lifetime, paid only once</p>
+              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup()" aria-label="lifetime">Get the
+                Lifetime plan</a>
             </div>
           </div>
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-64x64">
-                      <img src="/static/img/V-Transparent-Red.png" alt="Standard">
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-4" style="color: #cc0a0a;">Standard</p>
-                    <p class="subtitle is-6" style="color: #fff;"> <span style="color: #cc0a0a;">$4.99</span> USD per
-                      month</p>
-                  </div>
-                </div>
-                <div class="content">
-                  <button class="button is-info is-outlined"><i class="fa-solid fa-info-circle mr-1"></i>Perks</button>
-                  <button class="button is-primary">Subscribe Now</button>
-                </div>
-              </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card position-relative">
+            <span class="save-65">Save 65%</span>
+            <div class="card-content">
+              <h5 class="title is-4" style="color: #cc0a0a;">Yearly</h5>
+              <p class="subtitle is-6">$3.57 USD / month, billed every year</p>
+              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup()" aria-label="yearly">Get the
+                Yearly plan</a>
+
             </div>
           </div>
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-64x64">
-                      <img src="/static/img/V-Transparent-Red.png" alt="Standard">
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-4" style="color: #cc0a0a;">Premium</p>
-                    <p class="subtitle is-6" style="color: #fff;"> <span style="color: #cc0a0a;">$7.99</span> USD per
-                      month</p>
-                  </div>
-                </div>
-                <div class="content">
-                  <button class="button is-info is-outlined"><i class="fa-solid fa-info-circle mr-1"></i>Perks</button>
-                  <button class="button is-primary">Subscribe Now</button>
-                </div>
-              </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card position-relative">
+            <div class="card-content">
+              <h5 class="title is-4" style="color: #cc0a0a;">Monthly</h5>
+              <p class="subtitle is-6">$8.99 USD / month, billed monthly</p>
+              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup()" aria-label="monthly">Get the
+                Monthly plan</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Memberships Section End -->
-  </div>
+    <!-- Premium Section End -->
 
-  <!-- Footer Section Start -->
-  <footer class="footer bg-base">
-    <div class="content has-text-centered has-text-white">
-      <div class="mb-2">
-        <a href="https://discord.gg/rJxyySuTJ6" class="has-text-white" target="_blank">
-          <i class="fa-brands fa-discord"></i>
-        </a>
-        &nbsp; &nbsp;
-        <a href="https://github.com/jaymart95" class="has-text-white" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
+    <!-- Popup Start -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Select Options</h2>
+        <form>
+          <div>
+            <input type="checkbox" id="option1" name="option1" onclick="checkForm()">
+            <label for="option1">By making this purchase you agree to our Refund Policy and Terms of Service.</label>
+          </div>
+          <div>
+            <input type="checkbox" id="option2" name="option2" onclick="checkForm()">
+            <label for="option2">I have permission to make this purchase.</label>
+          </div>
+          <button type="button" class="button is-primary mt-4" onclick="submitForm()" id="purchaseButton"
+            disabled>Purchase</button>
+        </form>
       </div>
-      <p>
-        <span class="has-text-weight-bold">Vanity Roles</span>
-        <br />
-        &copy; <span id="cp-year"></span> Copyright Jay Development. All Rights
-        Reserved.
-      </p>
     </div>
-  </footer>
-  <!-- Footer Section End -->
+    <!-- Popup End -->
+
+    <!-- Plans Comparison Start -->
+    <div class="table-container">
+      <h2>PLAN COMPARISON</h2>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Free</th>
+            <th>Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Automation</td>
+            <td class="feature-no">✖</td>
+            <td class="feature-yes">✔</td>
+          </tr>
+          <tr>
+            <td>Custom Embed</td>
+            <td class="feature-no">✖</td>
+            <td class="feature-yes">✔</td>
+          </tr>
+          <tr>
+            <td>Multiple Vanities</td>
+            <td class="feature-no">✖</td>
+            <td class="feature-yes">✔</td>
+          </tr>
+          <tr>
+            <td>Game Roles</td>
+            <td class="feature-no">✖</td>
+            <td class="feature-yes">✔</td>
+          </tr>
+          <tr>
+            <td>Rotating Bot Status</td>
+            <td class="feature-no">✖</td>
+            <td class="feature-yes">✔</td>
+          </tr>
+          <tr>
+            <td>Custom Cooldown</td>
+            <td class="feature-no">✖</td>
+            <td class="feature-yes">✔</td>
+          </tr>
+          <tr>
+            <td>Blacklist</td>
+            <td class="feature-no">✖</td>
+            <td class="feature-yes">✔</td>
+          </tr>
+          <tr>
+            <td>Embed Templates</td>
+            <td class="feature-no">✖</td>
+            <td class="feature-yes">✔</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Plans Comparison End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer bg-base">
+      <div class="content has-text-centered has-text-white">
+        <div class="mb-2">
+          <a href="https://discord.gg/rJxyySuTJ6" class="has-text-white" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+          &nbsp; &nbsp;
+          <a href="https://github.com/jaymart95" class="has-text-white" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <p>
+          <span class="has-text-weight-bold">Vanity Roles</span>
+          <br />
+          &copy; <span id="cp-year"></span> Copyright Jay Development. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+  </div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
   <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
   <script src="/static/js/script.js"></script>
+  <script>
+    function showPopup() {
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    function submitForm() {
+      closePopup();
+      if (document.getElementsByClassName('monthly')) {
+        window.location.href = 'https://store.vanityroles.com/buy/4a47315d-e7a3-4198-8390-614435c98715';
+      } if (document.getElementsByClassName('lifetime')) {
+        window.location.href = ('https://store.vanityroles.com/buy/4a47315d-e7a3-4198-8390-614435c98715');
+      }
+      if (document.getElementsByClassName('yearly')) {
+        window.location.href = 'https://store.vanityroles.com/buy/4a47315d-e7a3-4198-8390-614435c98715';
+      } else {
+        alert('Please check both options before making a purchase.');
+      }
+    }
+
+    function checkForm() {
+      const option1 = document.getElementById('option1').checked;
+      const option2 = document.getElementById('option2').checked;
+      document.getElementById('purchaseButton').disabled = !(option1 && option2);
+    }
+  </script>
 </body>
 
 </html>
