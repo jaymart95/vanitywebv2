@@ -122,14 +122,19 @@
         <form>
           <div>
             <input type="checkbox" id="option1" name="option1" onclick="checkForm()">
-            <label for="option1">By making this purchase you agree to our Refund Policy and Terms of Service.</label>
+            <label for="option1">
+              By making this purchase you agree to our 
+              <a href="https://docs.vanityroles.com/getting-started/terms-of-service" target="_blank">Refund Policy</a> 
+              and 
+              <a href="https://docs.vanityroles.com/getting-started/terms-of-service" target="_blank">Terms of Service</a>.
+            </label>
           </div>
           <div>
             <input type="checkbox" id="option2" name="option2" onclick="checkForm()">
             <label for="option2">I have permission to make this purchase.</label>
           </div>
           <div>
-            <label for="guildID">Guild ID</label>
+            <label for="guildID">Server ID</label>
             <input type="text" id="guildID" name="guildID" oninput="checkForm()">
           </div>
           <button type="button" class="button is-primary mt-4" onclick="submitForm()" id="purchaseButton"
