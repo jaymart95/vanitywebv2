@@ -78,7 +78,7 @@
           <div class="card position-relative">
             <span class="most-popular">Most popular</span>
             <div class="card-content">
-              <h5 class="title is-4" style="color: #cc0a0a;">Lifetime</h5>
+              <h5 class="Lifetime" style="color: #cc0a0a;">Lifetime</h5>
               <p class="subtitle is-6">$69.99 USD lifetime, paid only once</p>
               <ul>
                 <li>Customizable Instance</li>
@@ -92,7 +92,7 @@
           <div class="card position-relative">
             <span class="save-65">Save 65%</span>
             <div class="card-content">
-              <h5 class="title is-4" style="color: #cc0a0a;">Yearly</h5>
+              <h5 class="Yearly" style="color: #cc0a0a;">Yearly</h5>
               <p class="subtitle is-6">$4.16 USD / month, billed every year</p>
               <a href="#" class="button is-primary is-fullwidth" onclick="showPopup()" aria-label="yearly">Get the
                 Yearly plan</a>
@@ -103,7 +103,7 @@
         <div class="column is-one-third">
           <div class="card position-relative">
             <div class="card-content">
-              <h5 class="title is-4" style="color: #cc0a0a;">Monthly</h5>
+              <h5 class="Monthly" style="color: #cc0a0a;">Monthly</h5>
               <p class="subtitle is-6">$5.99 USD / month, billed monthly</p>
               <a href="#" class="button is-primary is-fullwidth" onclick="showPopup()" aria-label="monthly">Get the
                 Monthly plan</a>
@@ -256,7 +256,8 @@
       closePopup();
       if (document.getElementsByClassName('monthly')) {
         window.location.href = 'https://store.vanityroles.com/buy/d4b6d09a-2fa4-4443-93c8-fe9b292429c6?checkout[custom][guild_id]=' + document.getElementById('guildID').value;
-      } if (document.getElementsByClassName('lifetime')) {
+      } 
+      if (document.getElementsByClassName('lifetime')) {
         window.location.href = 'https://store.vanityroles.com/buy/8870a085-4b90-4730-9a31-75277e01cc07?checkout[custom][guild_id]=' + document.getElementById('guildID').value;
       }
       if (document.getElementsByClassName('yearly')) {
