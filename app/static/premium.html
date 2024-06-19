@@ -73,33 +73,6 @@
     <section id="subscriptions" class="container my-5">
       <div class="text-center mb-5">
       </div>
-      <div class="columns is-centered">
-        <div class="column is-one-third">
-          <div class="card position-relative">
-            <span class="most-popular">Most popular</span>
-            <div class="card-content">
-              <h5 class="Lifetime" style="color: #cc0a0a;">Lifetime</h5>
-              <p class="subtitle is-6">$69.99 USD lifetime, paid only once</p>
-              <ul>
-                <li>Customizable Instance</li>
-              </ul>
-              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup()" aria-label="lifetime">Get the
-                Lifetime plan</a>
-            </div>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div class="card position-relative">
-            <span class="save-65">Save 65%</span>
-            <div class="card-content">
-              <h5 class="Yearly" style="color: #cc0a0a;">Yearly</h5>
-              <p class="subtitle is-6">$4.16 USD / month, billed every year</p>
-              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup()" aria-label="yearly">Get the
-                Yearly plan</a>
-
-            </div>
-          </div>
-        </div>
         <div class="column is-one-third">
           <div class="card position-relative">
             <div class="card-content">
@@ -254,17 +227,7 @@
 
     function submitForm() {
       closePopup();
-      if (document.getElementsByClassName('monthly')) {
-        window.location.href = 'https://store.vanityroles.com/buy/df9f65fb-fa9c-4ce6-99cb-cbd6a34d5aa0?checkout[custom][guild_id]=' + document.getElementById('guildID').value;
-      } 
-      if (document.getElementsByClassName('lifetime')) {
-        window.location.href = 'https://store.vanityroles.com/buy/8870a085-4b90-4730-9a31-75277e01cc07?checkout[custom][guild_id]=' + document.getElementById('guildID').value;
-      }
-      if (document.getElementsByClassName('yearly')) {
-        window.location.href = 'https://store.vanityroles.com/buy/0d8c24ea-0f82-4c8c-81d0-ca67324aa65e?checkout[custom][guild_id]=' + document.getElementById('guildID').value;
-      } else {
-        alert('Please check both options before making a purchase.');
-      }
+        window.location.href = 'https://store.vanityroles.com/buy/60ba21f7-99cf-4632-806f-dea2e252abdd?checkout[custom][guild_id]=' + document.getElementById('guildID').value;
     }
 
     function checkForm() {
