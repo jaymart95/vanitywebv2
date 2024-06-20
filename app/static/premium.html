@@ -71,16 +71,32 @@
     </section>
 
     <section id="subscriptions" class="container my-5">
-      <div class="text-center mb-5">
-      </div>
+      <div class="text-center mb-5"></div>
       <div class="columns is-centered">
         <div class="column is-one-third">
           <div class="card position-relative">
             <div class="card-content">
               <h5 class="Monthly" style="color: #cc0a0a;">Monthly</h5>
               <p class="subtitle is-6">$5.99 USD / month, billed monthly</p>
-              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup()" aria-label="monthly">Get the
-                Monthly plan</a>
+              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup('monthly')">Get the Monthly plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card position-relative">
+            <div class="card-content">
+              <h5 class="Yearly" style="color: #cc0a0a;">Yearly</h5>
+              <p class="subtitle is-6">$38.99 USD / year, billed yearly</p>
+              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup('yearly')">Get the Yearly plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card position-relative">
+            <div class="card-content">
+              <h5 class="Lifetime" style="color: #cc0a0a;">Lifetime</h5>
+              <p class="subtitle is-6">$69.99 USD, one-time payment</p>
+              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup('lifetime')">Get the Lifetime plan</a>
             </div>
           </div>
         </div>
@@ -89,7 +105,7 @@
     <!-- Premium Section End -->
 
     <!-- Popup Start -->
-    <div id="popup" class="popup">
+    <div id="popup" class="popup" style="display:none;">
       <div class="popup-content">
         <span class="close" onclick="closePopup()">&times;</span>
         <h2>Select Options</h2>
@@ -218,7 +234,10 @@
   <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
   <script src="/static/js/script.js"></script>
   <script>
-    function showPopup() {
+    let selectedPlan = '';
+
+    function showPopup(plan) {
+      selectedPlan = plan;
       document.getElementById('popup').style.display = 'block';
     }
 
@@ -227,14 +246,39 @@
     }
 
     function submitForm() {
+      const guildID = document.getElementById('guildID').value;
+      if (!guildID) {
+        alert('Please enter your Server ID.');
+        return;
+      }
+
       closePopup();
-        window.location.href = 'https://store.vanityroles.com/buy/60ba21f7-99cf-4632-806f-dea2e252abdd?checkout[custom][guild_id]=' + document.getElementById('guildID').value;
+      let redirectUrl = '';
+
+      switch (selectedPlan) {
+        case 'monthly':
+          redirectUrl = 'https://store.vanityroles.com/buy/monthly?checkout[custom][guild_id]=' + guildID;
+          break;
+        case 'yearly':
+          redirectUrl = 'https://store.vanityroles.com/buy/yearly?checkout[custom][guild_id]=' + guildID;
+          break;
+        case 'lifetime':
+          redirectUrl = 'https://store.vanityroles.com/buy/lifetime?checkout[custom][guild_id]=' + guildID;
+          break;
+        default:
+          alert('Invalid selection.');
+          return;
+      }
+
+      window.location.href = redirectUrl;
     }
 
     function checkForm() {
       const option1 = document.getElementById('option1').checked;
       const option2 = document.getElementById('option2').checked;
-      document.getElementById('purchaseButton').disabled = !(option1 && option2);
+      const guildID = document.getElementById('guildID').value.trim();
+
+      document.getElementById('purchaseButton').disabled = !(option1 && option2 && guildID);
     }
   </script>
 </body>
