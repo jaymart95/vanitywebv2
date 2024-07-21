@@ -76,27 +76,27 @@
         <div class="column is-one-third">
           <div class="card position-relative">
             <div class="card-content">
-              <h5 class="Monthly" style="color: #cc0a0a;">Monthly</h5>
-              <p class="subtitle is-6">$2.99 USD / month, billed monthly</p>
-              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup('monthly')">Get the Monthly plan</a>
+              <h5 class="Basic" style="color: #cc0a0a;">2 Servers</h5>
+              <p class="subtitle is-6">$4.99 USD</p>
+              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup('basic')">Get the Monthly plan</a>
             </div>
           </div>
         </div>
         <div class="column is-one-third">
           <div class="card position-relative">
             <div class="card-content">
-              <h5 class="Yearly" style="color: #cc0a0a;">Yearly</h5>
-              <p class="subtitle is-6">$29.99 USD / year, billed yearly</p>
-              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup('yearly')">Get the Yearly plan</a>
+              <h5 class="Yearly" style="color: #cc0a0a;">5 Servers</h5>
+              <p class="subtitle is-6">$9.99 USD billed yearly</p>
+              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup('advanced')">Get the Advanced plan</a>
             </div>
           </div>
         </div>
         <div class="column is-one-third">
           <div class="card position-relative">
             <div class="card-content">
-              <h5 class="Lifetime" style="color: #cc0a0a;">Lifetime</h5>
-              <p class="subtitle is-6">$45.99 USD, one-time payment</p>
-              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup('lifetime')">Get the Lifetime plan</a>
+              <h5 class="Lifetime" style="color: #cc0a0a;">15 Servers</h5>
+              <p class="subtitle is-6">$24.99 USD</p>
+              <a href="#" class="button is-primary is-fullwidth" onclick="showPopup('pro')">Get the Pro plan</a>
             </div>
           </div>
         </div>
@@ -127,6 +127,9 @@
             <label for="guildID">Server ID</label>
             <input type="text" id="guildID" name="guildID" oninput="checkForm()">
           </div>
+          <div>
+            <label for="coupon">Bot Token</label>
+            <input type="text" id="token" name="token">
           <button type="button" class="button is-primary mt-4" onclick="submitForm()" id="purchaseButton"
             disabled>Purchase</button>
         </form>
@@ -247,8 +250,9 @@
 
     function submitForm() {
       const guildID = document.getElementById('guildID').value;
-      if (!guildID) {
-        alert('Please enter your Server ID.');
+      const token = document.getElementById('token').value;
+      if (!guildID || !token) {
+        alert('Please enter your Server ID and Bot Token.');
         return;
       }
 
@@ -256,14 +260,14 @@
       let redirectUrl = '';
 
       switch (selectedPlan) {
-        case 'monthly':
-          redirectUrl = 'https://store.vanityroles.com/buy/60ba21f7-99cf-4632-806f-dea2e252abdd?checkout[custom][guild_id]=' + guildID;
+        case 'basic':
+          redirectUrl = 'https://store.vanityroles.com/buy/9b998af3-a1a0-4758-82e5-273b0ece712e?checkout[custom][guild_id]=' + guildID + '&checkout[custom][bot_token]=' + token;
           break;
-        case 'yearly':
-          redirectUrl = 'https://store.vanityroles.com/buy/0cbda098-59f3-4131-a733-f2cfddced9cd?checkout[custom][guild_id]=' + guildID;
+        case 'advanced':
+          redirectUrl = 'https://store.vanityroles.com/buy/019dffa1-cf50-4d4f-bf2d-e69bea6cb90e?checkout[custom][guild_id]=' + guildID + '&checkout[custom][bot_token]=' + token;
           break;
-        case 'lifetime':
-          redirectUrl = 'https://store.vanityroles.com/buy/66e99f04-6d30-41e6-8bf7-4ee3bf2776c2?checkout[custom][guild_id]=' + guildID;
+        case 'pro':
+          redirectUrl = 'https://store.vanityroles.com/buy/3083370c-b29a-4237-b3bf-48272357d319?checkout[custom][guild_id]=' + guildID + '&checkout[custom][bot_token]=' + token;
           break;
         default:
           alert('Invalid selection.');
@@ -277,6 +281,7 @@
       const option1 = document.getElementById('option1').checked;
       const option2 = document.getElementById('option2').checked;
       const guildID = document.getElementById('guildID').value.trim();
+      const token = document.getElementById('token').value.trim();
 
       document.getElementById('purchaseButton').disabled = !(option1 && option2 && guildID);
     }
