@@ -68,7 +68,7 @@ btn.on("click", function (e) {
 });
 
 // copyright year
-document.getElementById("cp-year").innerHTML = new Date().getFullYear()
+document.getElementById("cp-year").innerHTML = new Date().getFullYear();
 
 // Premium page functions
 function showPopup(plan) {

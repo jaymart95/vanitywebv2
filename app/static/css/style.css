@@ -12,6 +12,22 @@ html {
   color: goldenrod !important;
 }
 
+.blurple {
+  color: #7289da !important;
+}
+
+.is-blurple {
+  background-color: #7289da !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+
+.is-blurple:hover {
+  background-color: #5b73c4 !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+
 .subtitle.is-6 .price {
   color: goldenrod !important;
 }
@@ -170,7 +186,20 @@ nav.nav-w {
 }
 
 .title.lined {
-  margin-bottom: 0px;
+  margin-bottom: 1rem;
+}
+
+/* Stats section spacing fix */
+#stats .column {
+  padding: 2rem 1rem;
+}
+
+#stats .title {
+  margin-bottom: 0.5rem !important;
+}
+
+#stats .subtitle {
+  margin-top: 0.5rem;
 }
 
 .vert-move {
