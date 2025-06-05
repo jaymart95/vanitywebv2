@@ -69,3 +69,37 @@ btn.on("click", function (e) {
 
 // copyright year
 document.getElementById("cp-year").innerHTML = new Date().getFullYear()
+
+// Premium page functions
+function showPopup(plan) {
+  document.getElementById("popup").style.display = "block";
+  // Store the selected plan
+  document.getElementById("popup").setAttribute("data-plan", plan);
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+function checkForm() {
+  const option1 = document.getElementById("option1").checked;
+  const option2 = document.getElementById("option2").checked;
+  const guildID = document.getElementById("guildID").value.trim();
+  const purchaseButton = document.getElementById("purchaseButton");
+  
+  if (option1 && option2 && guildID) {
+    purchaseButton.disabled = false;
+  } else {
+    purchaseButton.disabled = true;
+  }
+}
+
+function submitForm() {
+  const plan = document.getElementById("popup").getAttribute("data-plan");
+  const guildID = document.getElementById("guildID").value;
+  const token = document.getElementById("token").value;
+  
+  // Here you would typically make an API call to process the purchase
+  alert(`Processing ${plan} plan purchase for server ID: ${guildID}`);
+  closePopup();
+}
